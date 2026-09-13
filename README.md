@@ -169,9 +169,7 @@ No separate frontend server or CORS configuration is needed, because the UI and 
 
 | Current | Forecast | Location |
 |---|---|---|
-| ![Current weather](src/main/resources/static/ScreenShots/img.png) 
-| ![Forecast](src/main/resources/static/ScreenShots/img_1.png) 
-| ![Location](src/main/resources/static/ScreenShots/img_2.png) |
+| ![Current weather](src/main/resources/static/ScreenShots/img.png) | ![Forecast](src/main/resources/static/ScreenShots/img_1.png) | ![Location](src/main/resources/static/ScreenShots/img_2.png) |
 
 > Add your own screenshots to `docs/screenshots/` and update the paths above if you name the files differently.
 
