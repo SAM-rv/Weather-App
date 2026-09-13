@@ -165,6 +165,16 @@ No separate frontend server or CORS configuration is needed, because the UI and 
 
 > **Note:** `script.js` currently points `BASE_URL` at `http://localhost:8080`. Since the UI is now served by the same Spring Boot app, you can simplify this to a relative/empty base (`''`) so it keeps working regardless of host or port.
 
+## Screenshots
+
+| Current | Forecast | Location |
+|---|---|---|
+| ![Current weather]() 
+| ![Forecast]() 
+| ![Location]() |
+
+> Add your own screenshots to `docs/screenshots/` and update the paths above if you name the files differently.
+
 ## Frontend Pages
 
 The UI is a single `index.html` with three tab-switched views (no page reload):
