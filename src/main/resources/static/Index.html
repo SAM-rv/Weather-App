@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Weather</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <div class="card">
+
+      <!-- Page switcher -->
+      <header class="top-row">
+        <h1 class="brand">Weather</h1>
+        <nav class="page-tabs" id="page-tabs">
+          <button class="page-tab active" data-page="current" type="button">Current</button>
+          <button class="page-tab" data-page="forecast" type="button">Forecast</button>
+          <button class="page-tab" data-page="location" type="button">Location</button>
+        </nav>
+      </header>
+
+      <!-- ===================== CURRENT WEATHER PAGE ===================== -->
+      <section class="page active" id="page-current">
+        <form class="input-row" id="current-form">
+          <input type="text" id="current-city" placeholder="City, e.g. pune" required />
+          <button type="submit">Get weather</button>
+        </form>
+
+        <div class="unit-toggle" id="unit-toggle">
+          <button class="unit active" data-unit="C" type="button">°C</button>
+          <span class="unit-sep">|</span>
+          <button class="unit" data-unit="F" type="button">°F</button>
+        </div>
+
+        <p class="empty-state" id="current-empty">Enter a city and press "Get weather" to see current conditions.</p>
+        <p class="error" id="current-error" hidden></p>
+
+        <div class="hero" id="current-result" hidden>
+          <div class="current">
+            <div class="icon-lg" id="current-icon"></div>
+            <div class="temp-value" id="current-temp">—</div>
+          </div>
+          <div class="meta">
+            <p class="meta-line meta-place" id="current-place">—</p>
+            <p class="meta-line" id="current-condition">—</p>
+            <p class="meta-line meta-sub" id="current-localtime">—</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FORECAST PAGE ===================== -->
+      <section class="page" id="page-forecast">
+        <form class="input-row" id="forecast-form">
+          <input type="text" id="forecast-city" placeholder="City, e.g. latur" required />
+          <input type="number" id="forecast-days" placeholder="Days" min="1" max="14" required />
+          <button type="submit">Get forecast</button>
+        </form>
+
+        <p class="empty-state" id="forecast-empty">Enter a city and number of days to see the forecast.</p>
+        <p class="error" id="forecast-error" hidden></p>
+
+        <div id="forecast-result" hidden>
+          <p class="meta-line meta-place" id="forecast-place">—</p>
+          <p class="meta-line meta-sub" id="forecast-localtime">—</p>
+          <div class="forecast-row" id="forecast-days-row"></div>
+        </div>
+      </section>
+
+      <!-- ===================== LOCATION PAGE ===================== -->
+      <section class="page" id="page-location">
+        <form class="input-row" id="location-form">
+          <input type="text" id="location-city" placeholder="City, e.g. pune" required />
+          <button type="submit">Get location</button>
+        </form>
+
+        <p class="empty-state" id="location-empty">Enter a city to see its location details.</p>
+        <p class="error" id="location-error" hidden></p>
+
+        <dl class="field-list" id="location-result" hidden>
+          <div class="field-row"><dt>Name</dt><dd id="loc-name">—</dd></div>
+          <div class="field-row"><dt>Region</dt><dd id="loc-region">—</dd></div>
+          <div class="field-row"><dt>Country</dt><dd id="loc-country">—</dd></div>
+          <div class="field-row"><dt>Latitude</dt><dd id="loc-lat">—</dd></div>
+          <div class="field-row"><dt>Longitude</dt><dd id="loc-lon">—</dd></div>
+          <div class="field-row"><dt>Timezone</dt><dd id="loc-tz">—</dd></div>
+          <div class="field-row"><dt>Local time</dt><dd id="loc-localtime">—</dd></div>
+        </dl>
+      </section>
+
+    </div>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
